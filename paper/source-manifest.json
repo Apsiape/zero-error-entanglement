@@ -24,7 +24,7 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "e4093a40d6f0e1724fb3889a9e01c4468e025e7e4cadaebe407e00a118828ea2"
+      "sha256": "5d94b4476c125fa2c431942e98630df81e863dde5447a08cf26c645cd59c340d"
     },
     {
       "path": "LICENSE-APACHE-2.0.txt",
@@ -104,7 +104,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "eee8800cf774db1889dd4127cdcd9a8301b610dc0add8ea2a151ba837b849f3f"
+      "sha256": "534b5104cf3bcc7cfe4889a757ff55d2b8de0ad464717d8c6be2593eb1c5b205"
     },
     {
       "path": "RIGHTS.md",

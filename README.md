@@ -1,6 +1,6 @@
 # One-shot zero-error communication with normal entanglement is Σ⁰₂-complete
 
-Seth Douglas and Nidhal Mghirbi. Version 1.0.0, 3 November 2026.
+Seth Douglas and Nidhal Mghirbi. Version 1.0.0, 3 November 2026. DOI: [10.5281/zenodo.23924869](https://doi.org/10.5281/zenodo.23924869).
 
 **This is a preprint. It has not been peer reviewed.**
 
