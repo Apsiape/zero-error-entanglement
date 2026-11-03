@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper]{article}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.08in]{geometry}
+\usepackage{booktabs,array,longtable,enumitem,microtype,xcolor,needspace}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem*{remark}{Remark}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\Cat}{Cat}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\qs}{\mathrm{qs}}
+\newcommand{\qc}{\mathrm{qc}}
+\newcommand{\ZE}{\mathrm{ZE}}
+\newcommand{\finS}{\mathrm{finS}}
+\newcommand{\hcat}{h_{\mathrm{Cat}}}
+\newcommand{\kcat}{k_{\mathrm{Cat}}}
+\newcommand{\WW}{\mathcal W}
+\newcommand{\drow}{d_{\mathrm{row}}}
+\newcommand{\qclk}{q_{\mathrm{clk}}}
+\newcommand{\Ccat}{C_{\mathrm{Cat}}}
+\newcommand{\Gcat}{H_{\mathrm{Cat}}}
+\hypersetup{pdftitle={One-shot zero-error communication with normal entanglement is Σ⁰₂-complete},pdfauthor={Seth Douglas and Nidhal Mghirbi}}
+\title{One-shot zero-error communication with normal entanglement is $\Sigma^0_2$-complete}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Can a finite classical channel require an infinite entangled resource to send a fixed number of messages without error? We classify the one-use feasibility problem for rational channels. With an arbitrary normal spatial resource it is $\Sigma^0_2$-complete. The same classification holds when the resource must have finite marginal entropy. A separate channel admits a normal zero-error code, while every normal code achieving its specified message count has infinite marginal entropy on both sides.
+
+The proof extends Man\v{c}inska's finite-dimensional game-to-channel correspondence to trace-class operators. For the game's channel, a normal code attaining the clique bound (one message per local question) corresponds to perfect play with summable Schmidt amplitudes. Four successive constraints, each doubling a ratio of Schmidt weights, are critical and exclude such a code; five suffice for both reductions. As a corollary of Man\v{c}inska's finite-dimensional correspondence and $\mathsf{MIP}^*=\mathsf{RE}$, we obtain $\Sigma^0_1$-completeness for finite-dimensional resources. We also prove $\Pi^0_1$-completeness for commuting operators. Our capacity statements are upper computability bounds; the hardness results concern one use.
+\end{abstract}
+\begin{center}\small AI systems assisted with this work. The authors take responsibility for its claims; see ``How this work was done.'' This preprint has not been peer reviewed.\end{center}
+\clearpage
+{\small\tableofcontents}
+\clearpage
+\input{sections/intro}
+\input{sections/notation}
+\input{sections/normal}
+\input{sections/compiler}
+\input{sections/complexity}
+\input{sections/commuting}
+\input{sections/catalan}
+\input{sections/capacity}
+\input{sections/methods}
+\appendix
+\input{sections/reproducibility}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

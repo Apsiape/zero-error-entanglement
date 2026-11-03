@@ -1,0 +1,198 @@
+\section{The compiler at a general modular ratio}\label{sec:compiler}
+We use the finite projection and Boolean-row compiler of \cite[Section~4]{Sigma2}, itself based on \cite{Entropy}. Its graph identities, rational-row tests, and normal support proofs remain unchanged. We specify the parameter change and prove its consequences. Each flagged-magic-square (FMS) bridge forces a density ratio of two between consecutive selected corners (Figure~\ref{fig:chain}).
+A chain of $n$ bridges therefore gives the ratio $2^n$ from source to far corner.
+Transporting a source-to-far creation operator back to the source gives $\lambda=2^{-n}$.
+Four orthogonal creations then generate a rooted tree with four branches per vertex.
+The density of each word sector is $\lambda^{|w|}$ times the root density.
+Summing over the $4^\ell$ words at depth $\ell$ gives a geometric depth distribution.
+The exact spectrum identity below accounts for the finite scaffold and auxiliary factors.
+Its square-root trace determines whether perfect play gives a normal channel code.
+
+\begin{figure}[ht]
+\centering
+\[
+ \underset{1}{e_0}\ \xrightarrow{\ w_1\ }\
+ \underset{2}{e_1}\ \xrightarrow{\ w_2\ }\
+ \underset{2^2}{e_2}\ \longrightarrow\ \cdots\
+ \xrightarrow{\ w_n\ }\ \underset{2^n}{e_n}
+\]
+\caption{Selected corners and their masses relative to the source. Each bridge also has three further magic corners of the same mass as its selected endpoint. Returning along the chain gives the creation ratio $\lambda=2^{-n}$.}
+\label{fig:chain}
+\end{figure}
+
+\subsection{Admissible input and the \texorpdfstring{$n$}{n}-bridge assembly}
+\begin{definition}\label{def:admissible}
+Fix an integer $n\geq3$ and put $\lambda=2^{-n}$. An admissible presentation consists of four contraction symbols $A_\alpha$, $\alpha\in\{0,1\}^2$, a centralizer root projection $P_\circ$, and finitely many centralizer labels typed as unitaries, projections, positive contractions, or general contractions. Besides rational $*$-polynomials in the centralizer labels, its equations are
+\[
+ A_\alpha^*A_\beta=\delta_{\alpha\beta}I,\qquad
+ \sum_\alpha A_\alpha A_\alpha^*=I-P_\circ,
+\]
+endpoint equations $LA_\alpha=A_\beta B$ or $LA_\alpha=0$, and finite sums $\sum_\nu B_\nu A_{\alpha_\nu}C_\nu=0$. The endpoint coefficients are centralizer polynomials; every label appearing at a left endpoint is transported. No other monomial contains more than one creation symbol.
+
+A normal realization is a nonzero Hilbert space with a faithful density $h_0$, bounded operators of the declared types, all the application identities, and
+\begin{equation}\label{eq:covariance}
+ [h_0,L]=0\quad\text{for centralizer labels},\qquad
+ h_0A_\alpha=\lambda A_\alpha h_0.
+\end{equation}
+\end{definition}
+The change from \cite[Definition in Section~4.4]{Sigma2} is the number of bridges and the covariance ratio. In particular the ratio is imposed by the assembly, rather than by a real coefficient in the Boolean game.
+
+Set
+\begin{equation}\label{eq:weights}
+ \Omega_n=1+4\sum_{g=1}^n2^g=2^{n+3}-7,\qquad
+ \mu_n=\Omega_n^{-1}(1;2^{\oplus4};4^{\oplus4};\ldots;(2^n)^{\oplus4}).
+\end{equation}
+The notation $t^{\oplus4}$ denotes four entries equal to $t$.
+
+\begin{lemma}[$n$-bridge compiler]\label{lem:compiler}
+Every admissible presentation effectively gives a finite rational Boolean game $G^{(n)}$. Perfect normal spatial strategies exist exactly when normal realizations exist. The completeness map appends finite scaffold, qutrit, and row factors. The assembly parameters are
+\begin{center}
+\begin{tabular}{@{}ll@{}}\toprule
+quantity&value\\\midrule
+orthogonal scaffold corners&$4n+1$\\
+frame-bound parameters&$6n+1$\\
+cover constant&$\Omega_n=2^{n+3}-7$\\
+chain covariance&$hv=2^n vh$\\
+normalized source density&$\Omega_n e_0he_0$\\
+far-corner weight relative to source&$2^n$\\\bottomrule
+\end{tabular}
+\end{center}
+Here $h$ is the normalized scaffold density after removing its finite scalar factors. The completeness construction preserves finite marginal entropy.
+\end{lemma}
+\begin{proof}
+Use mutually orthogonal synchronized corners
+\[
+ e_0;\quad m_{g,00},m_{g,01},m_{g,10},m_{g,11}\quad(1\leq g\leq n),
+\]
+put $e_g=m_{g,00}$ and $M_g=\sum_{a,b}m_{g,ab}$, and impose $e_0+\sum_gM_g=I$. Conditional flagged-magic-square bridge $g$ has flag $e_{g-1}$, magic support $M_g$, and activity $e_{g-1}+M_g$. Retain the original questions, all activity/event bindings in both orientations, and the label refinements of \cite[Lemmas~4.1--4.2]{Sigma2}. The normal bridge gives partial isometries
+\[
+ w_g^*w_g=e_{g-1},\qquad w_gw_g^*=e_g,\qquad hw_g=2w_gh.
+\]
+The other three magic corners are identified by synchronized Pauli matrix units and have the same density block as $e_g$. Thus $v=w_n\cdots w_1$ satisfies
+\[
+ v^*v=e_0,\qquad vv^*=e_n,\qquad hv=2^n vh.
+\]
+Cyclicity of trace makes each selected corner have mass $2^g$ times the source mass. The cover gives source mass $1/\Omega_n$, hence a nonzero source. There are $4n+1$ corners; adding the two positive Pauli-axis events for each bridge gives $6n+1$ parameters bound to the scalar qutrit frame.
+
+Here are the remaining equations, to fix the assembly unambiguously. A unitary label uses itself, a projection uses $2P-I$, a positive contraction $T$ uses $(2I+u+u^*)/4$, and a general contraction uses $(u_++u_-)/2$. Let $\Lambda$ contain the encoding of $P_\circ$ and all unitary encodings required at left endpoints. The root projection is transported even when it occurs in no endpoint equation. For $0\leq r\leq n$ impose
+\[
+ (u_{r,t}-I)(I-e_r)=0\quad(t\in\Lambda).
+\]
+Decode the corner copies $L_r$ using the corner identity $e_r$. For each bridge impose the block-unitary equation
+\begin{equation}\label{eq:blockunitary}
+ v_{g,t}=I-e_{g-1}-M_g+e_{g-1}u_{g-1,t}
+ +\sum_{a,b}\mathfrak x_g^a\mathfrak z_g^be_gu_{g,t}\mathfrak z_g^{-b}\mathfrak x_g^{-a}.
+\end{equation}
+Here $\mathfrak x_g,\mathfrak z_g$ are the bound Pauli reflections extended by identity outside $M_g$. Refine each retained sign question, on each party, for the six frame projections
+\[
+ F_1,F_2,F_3,G_{12}(1),G_{13}(1),G_{23}(1)
+\]
+and for $G_{12}(v_{g,t})$, $t\in\Lambda$. The shared opposite questions force every refined coarse sign to equal the original one. The six frame commutators give $w_g=I_3\otimes\widetilde w_g$. The graph-label commutator then gives the actual transport equation
+\[
+ w_gu_{g-1,t}=u_{g,t}w_g,\qquad L_nv=vL_0.
+\]
+Distinct transported labels need not commute with each other.
+
+Introduce centralizer contractions $a_\alpha=e_na_\alpha e_0$, encoded by two unitaries. Translate the application equations as follows:
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}\toprule
+root equation&centralizer equation\\\midrule
+$A_\alpha^*A_\beta=\delta_{\alpha\beta}I$&$a_\alpha^*a_\beta=\delta_{\alpha\beta}e_0$\\
+$\sum_\alpha A_\alpha A_\alpha^*=I-P_\circ$&$\sum_\alpha a_\alpha a_\alpha^*=e_n-(P_\circ)_n$\\
+$LA_\alpha=A_\beta B$&$L_na_\alpha=a_\beta B_0$\\
+$LA_\alpha=0$&$L_na_\alpha=0$\\
+$\sum_\nu B_\nu A_{\alpha_\nu}C_\nu=0$&$\sum_\nu (B_\nu)_na_{\alpha_\nu}(C_\nu)_0=0$\\
+centralizer polynomial&same polynomial in source copies\\\bottomrule
+\end{tabular}
+\end{center}
+Extraction $A_\alpha=v^*a_\alpha$ reverses every row, since $v$ is unitary between the two corners and intertwines all left endpoint labels. It gives \eqref{eq:covariance}, because $hv^*=2^{-n}v^*h$. Only the displayed centralizer polynomials are submitted to the graph compiler; products of modular transports are never treated as centralizer words.
+
+For completeness, from a realization take the scaffold density
+\begin{equation}\label{eq:scaffolddensity}
+ h_{\rm sc}=\operatorname{diag}(\mu_n)\otimes h_0.
+\end{equation}
+Use identity corner identifications and put $a_\alpha=|e_n\rangle\langle e_0|\otimes A_\alpha$. The covariance makes $a_\alpha$ commute with $h_{\rm sc}$. Its positive eigenspaces are finite dimensional. Within each such block the polar partial isometry of any contraction $T$ extends to a unitary $V$, and
+\[
+ U_\pm=V\bigl(|T|\pm i\sqrt{I-|T|^2}\bigr),\qquad T=(U_++U_-)/2.
+\]
+Their direct sums are bounded centralizer unitaries. Positive contractions use $u=2T-I+2i\sqrt{T(I-T)}$; projections use their reflections. Copy the same source encodings through the bridge identifications. This realizes all block and support equations simultaneously.
+
+Append a maximally entangled qutrit and apply the actual graph and triangle formulas of \cite[Section~4.2]{Sigma2}. They certify products of the common labels. Finally apply the Boolean rational-row construction \cite[Lemma~4.3]{Sigma2}, adjoining a finite maximally entangled row ancilla of dimension $\drow=d_{\max}$. Its old-projection/scalar-axis joint questions put every named synchronized old projection in the commutant of $\mathrm{Mat}_{\drow}$. The FMS and refinement tests remain in the game. These unchanged normal support arguments prove both implications. All new indices are finite; the coefficients and sampling probabilities are rational. Padding questions and accepting unspecified pairs gives a finite game effectively. The appended factors have finite entropy.
+\end{proof}
+
+\subsection{An exact spectrum identity}
+One must be careful when removing the row factor in soundness: the FMS signs were not synchronized, so their transports need not commute with $\mathrm{Mat}_{\drow}$. The following elementary cancellation supplies the needed reduction without a partial trace over an infinite space.
+
+\paragraph{Finite-amplification cancellation.}
+If two finite-dimensional tuples of unitaries become unitarily equivalent after $\drow$ identical copies, the original tuples are unitarily equivalent. Indeed they are finite-dimensional representations of the universal $*$-algebra on the tuple. The image in their direct sum is a finite-dimensional $C^*$-algebra. Decompose its two representations into irreducibles; amplification multiplies every multiplicity by $\drow$, so equality of amplified multiplicities cancels $\drow$.
+
+\begin{lemma}[Exact spectrum identity]\label{lem:spectrum}
+For every pure perfect strategy of $G^{(n)}$, with marginal $h$ and Schmidt operator $D=\sqrt h$, there is a normal realization with density $h_0$ such that, including multiplicities,
+\begin{equation}\label{eq:specidentity}
+ \spec(h)=\spec\left(\operatorname{diag}(\mu_n)\otimes h_0
+                    \otimes I_3/3\otimes I_{\drow}/\drow\right).
+\end{equation}
+Conversely every realization has a perfect strategy with this spectrum. In particular, in the extended nonnegative reals,
+\begin{equation}\label{eq:traceidentity}
+ \Tr D=c_n\Tr\sqrt{h_0},\qquad
+ c_n=\sqrt{3\drow}\,\frac{1+4\sum_{g=1}^n2^{g/2}}{\sqrt{\Omega_n}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Restrict to the original marginal support. Synchronization makes the certified scalar matrix algebras commute with the density. The named old projections commute with $\mathrm{Mat}_{\drow}$; the bound parameters and graph units also provide the scalar $\mathrm{Mat}_3$ frame. These two scalar algebras commute, so their exact matrix-unit decompositions give a density $I_3/3\otimes I_{\drow}/\drow\otimes h_{\rm base}$ and factorizations of every named old synchronized projection. This is a finite matrix-unit decomposition, not an uncontrolled partial trace.
+
+The magic matrix units identify all four density blocks at each bridge. The $w_g$ identify consecutive normalized selected density blocks, with ratio two. The cover therefore implies that the full density has the spectrum in \eqref{eq:specidentity}, where $h_0$ is its normalized source block after removal of both scalar factors. It remains to verify that this $h_0$ is the density of a realization; simply compressing $v^*a_\alpha$ across $\mathrm{Mat}_{\drow}$ would not prove that assertion.
+
+The frame refinements make $v$ act trivially on $\mathrm{Mat}_3$. After removing that frame it is a unitary between the $\drow$-amplifications of the source and far spaces, intertwining their normalized densities and every transported unitary label. In each positive density eigenspace these spaces are finite dimensional. Apply finite-amplification cancellation to their transported unitary tuples. This gives an unamplified unitary for each positive eigenvalue. Their Hilbert direct sum $\widetilde v$ intertwines $h_0$ with the normalized far density, and intertwines all transported labels simultaneously. The densities are faithful, so these eigenspaces exhaust both spaces.
+
+All centralizer contractions $a_\alpha$ are polynomials in old labels and factor across both scalar algebras; write their reduced forms $\widetilde a_\alpha$. Define
+$\widetilde A_\alpha=\widetilde v^*\widetilde a_\alpha$.
+The reduced translated equations in Lemma~\ref{lem:compiler} give every application identity. Intertwining of the normalized densities, together with the source/far weight $2^n$, gives $h_0\widetilde A_\alpha=2^{-n}\widetilde A_\alpha h_0$. This proves the realization assertion. The new creations need not be restrictions of the original creations.
+
+Completeness uses \eqref{eq:scaffolddensity}, followed by the two normalized maximally mixed factors, so has exactly the same spectrum. Taking the square root and the trace of this finite tensor product proves \eqref{eq:traceidentity}; nonnegative spectral sums justify it even when the answer is infinity.
+\end{proof}
+
+\subsection{The tree at general \texorpdfstring{$\lambda$}{lambda}}\label{sec:tree}
+The tree part of \cite[Section~5]{Sigma2} works for every $0<\lambda<1/4$. For clarity we give the density calculation. For a word $w$ in four letters, write $A_w$ for the product of its creations and
+\[
+ Q_\ell=\sum_{|w|=\ell}A_wA_w^*.
+\]
+The isometry relations and covariance imply
+\[
+ \Tr(h_0Q_\ell)=(4\lambda)^\ell,\qquad
+ \Tr(h_0P_\circ)=1-4\lambda.
+\]
+The decreasing $Q_\ell$ have a strong limit of zero $h_0$-weight, hence zero by faithfulness. Their successive differences are $\sum_{|w|=\ell}A_wP_\circ A_w^*$. Thus, with $\mathcal K=P_\circ\HH\ne0$,
+\begin{equation}\label{eq:treefactor}
+ \HH\simeq\ell^2(\WW)\otimes\mathcal K,\quad
+ h_0=h_{F,\lambda}\otimes\sigma,\quad
+ h_{F,\lambda}=(1-4\lambda)\sum_w\lambda^{|w|}|w\rangle\langle w|,
+\end{equation}
+where $\sigma$ is a faithful density. The covariance makes every word-sector projection commute with $h_0$, so transporting the root block proves the equality, not only its diagonal entries. Depth $\ell$ has probability $(1-4\lambda)(4\lambda)^\ell$; $(4\lambda)^\ell$ is the mass at depth at least $\ell$.
+
+The coordinate, Weyl-clock, bounded period-reader and deterministic tableau equations of \cite[Sections~5--7]{Sigma2} contain no Fock density ratio. Their proofs use only faithful normality, positive finite-dimensional density eigenspaces, the exact tree decomposition, and a positive weight at every finite depth. All hold in \eqref{eq:treefactor}. Consequently their soundness and canonical completeness hold unchanged for every $\lambda=2^{-n}<1/4$. In particular the Weyl determinant still forces a root phase of finite order: on a positive density eigenspace of dimension $\qclk$, $J_{\rm clk}K_{\rm clk}=\zeta K_{\rm clk}J_{\rm clk}$ gives $\zeta^{\qclk}=1$. No clock relation is squared or otherwise changed.
+
+\subsection{Summability and its critical point}
+Equation~\eqref{eq:treefactor} gives
+\begin{equation}\label{eq:trsqrtF}
+ \Tr\sqrt{h_{F,\lambda}}
+ =\sqrt{1-4\lambda}\sum_{\ell=0}^\infty(4\sqrt\lambda)^\ell
+ =\frac{\sqrt{1-4\lambda}}{1-4\sqrt\lambda}
+\end{equation}
+when $\lambda<1/16$, and infinity when $1/16\leq\lambda<1/4$.
+For the canonical YES realization $\sigma=I_{\qclk}/\qclk$, Lemma~\ref{lem:spectrum} therefore gives
+\begin{equation}\label{eq:YESsum}
+ \Tr D=\sqrt{3\qclk\drow}\,
+ \frac{1+4\sum_{g=1}^n2^{g/2}}{\sqrt{\Omega_n}}
+ \frac{\sqrt{1-2^{2-n}}}{1-2^{2-n/2}}\quad(n>4).
+\end{equation}
+For five bridges and the optional eight-bridge construction, the exact coefficients are
+\begin{align}
+ n=5:&\quad \Tr D=\frac{(81+53\sqrt2)\sqrt7}{2\sqrt{83}}\sqrt{\qclk\drow},\label{eq:fiveconstant}\\
+ n=8:&\quad \Tr D=\frac{(121+60\sqrt2)\sqrt{21}}{2\sqrt{2041}}\sqrt{\qclk\drow}.\label{eq:eightconstant}
+\end{align}
+They are approximately $22.65\sqrt{\qclk\drow}$ and $10.44\sqrt{\qclk\drow}$.
+
+\begin{remark}[The original four bridges are critical]\label{rem:critical}
+At $n=4$, every realization has $\Tr\sqrt{h_0}=\infty$, regardless of $\sigma$, because the per-depth amplitude sum in \eqref{eq:trsqrtF} is constant and nonzero. Lemma~\ref{lem:spectrum} then makes every perfect pure game strategy have infinite amplitude sum. Theorem~\ref{thm:correspondence} implies that the channel of every game $G_e$ of \cite[Theorem~7.1]{Sigma2} has no $k$-message normal code, for every input index. Applying its original games directly would therefore give an empty YES set, rather than the desired hardness reduction.
+\end{remark}

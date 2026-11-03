@@ -1,0 +1,557 @@
+{
+  "bib": "verification/attribution/snowball-input.bib",
+  "unresolved": [
+    "MIPRE",
+    "Entropy",
+    "Sigma2"
+  ],
+  "rows": {
+    "backward": [
+      {
+        "score": 5.0,
+        "links": 5,
+        "via": [
+          "Harris",
+          "KPS",
+          "MNY",
+          "PSS",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 2013,
+        "title": "About the Connes embedding conjecture",
+        "authors": "Narutaka Ozawa",
+        "venue": "Japanese journal of mathematics",
+        "id": "10.1007/s11537-013-1280-5"
+      },
+      {
+        "score": 5.0,
+        "links": 5,
+        "via": [
+          "Harris",
+          "KPS",
+          "MNY",
+          "PSS",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 2011,
+        "title": "Connes' embedding problem and Tsirelson's problem",
+        "authors": "Marius Junge et al.",
+        "venue": "Journal of Mathematical Physics",
+        "id": "10.1063/1.3514538"
+      },
+      {
+        "score": 4.5,
+        "links": 4,
+        "via": [
+          "Harris",
+          "KPS",
+          "MNY",
+          "Slofstra"
+        ],
+        "hits": [
+          "nonlocal game"
+        ],
+        "year": 2019,
+        "title": "THE SET OF QUANTUM CORRELATIONS IS NOT CLOSED",
+        "authors": "William Slofstra",
+        "venue": "Forum of Mathematics Pi",
+        "id": "10.1017/fmp.2018.3"
+      },
+      {
+        "score": 4.0,
+        "links": 4,
+        "via": [
+          "Harris",
+          "KPS",
+          "MNY",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2010,
+        "title": "Tsirelson's problem and Kirchberg's conjecture",
+        "authors": "Tobias Fritz",
+        "venue": "",
+        "id": "W3104728484"
+      },
+      {
+        "score": 4.0,
+        "links": 4,
+        "via": [
+          "Harris",
+          "KPS",
+          "MNY",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 2012,
+        "title": "TSIRELSON'S PROBLEM AND KIRCHBERG'S CONJECTURE",
+        "authors": "TOBIAS FRITZ",
+        "venue": "Reviews in Mathematical Physics",
+        "id": "10.1142/s0129055x12500122"
+      },
+      {
+        "score": 4.0,
+        "links": 4,
+        "via": [
+          "Harris",
+          "MNY",
+          "NPA",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 1969,
+        "title": "Proposed Experiment to Test Local Hidden-Variable Theories",
+        "authors": "John F. Clauser et al.",
+        "venue": "Physical Review Letters",
+        "id": "10.1103/physrevlett.23.880"
+      },
+      {
+        "score": 3.5,
+        "links": 3,
+        "via": [
+          "CLMW",
+          "MR",
+          "PSS"
+        ],
+        "hits": [
+          "zero-error"
+        ],
+        "year": 1979,
+        "title": "On the Shannon capacity of a graph",
+        "authors": "LÃ¡szlÃ³ LovÃ¡sz",
+        "venue": "IEEE Transactions on Information Theory",
+        "id": "10.1109/tit.1979.1055985"
+      },
+      {
+        "score": 3.0,
+        "links": 3,
+        "via": [
+          "CLMW",
+          "NPA",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 1964,
+        "title": "On the Einstein Podolsky Rosen paradox",
+        "authors": "James S. Bell",
+        "venue": "Physics Physique Fizika",
+        "id": "10.1103/physicsphysiquefizika.1.195"
+      },
+      {
+        "score": 3.0,
+        "links": 3,
+        "via": [
+          "MNY",
+          "NPA",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 2008,
+        "title": "The Quantum Moment Problem and Bounds on Entangled Multi-prover Games",
+        "authors": "Andrew C. Doherty et al.",
+        "venue": "IEEE Conference on Computational Complexity (CCC)",
+        "id": "10.1109/ccc.2008.26"
+      },
+      {
+        "score": 3.0,
+        "links": 3,
+        "via": [
+          "KPS",
+          "PSS",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 2015,
+        "title": "QUANTUM CHROMATIC NUMBERS VIA OPERATOR SYSTEMS",
+        "authors": "Vern I. Paulsen et al.",
+        "venue": "The Quarterly Journal of Mathematics",
+        "id": "10.1093/qmath/hav004"
+      },
+      {
+        "score": 3.0,
+        "links": 3,
+        "via": [
+          "Harris",
+          "MNY",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 1990,
+        "title": "Simple unified form for the major no-hidden-variables theorems",
+        "authors": "N. David Mermin",
+        "venue": "Physical Review Letters",
+        "id": "10.1103/physrevlett.65.3373"
+      },
+      {
+        "score": 3.0,
+        "links": 3,
+        "via": [
+          "MR",
+          "MRV",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2007,
+        "title": "On the Quantum Chromatic Number of a Graph",
+        "authors": "Peter Jâ€Ž. Cameron et al.",
+        "venue": "The Electronic Journal of Combinatorics",
+        "id": "10.37236/999"
+      },
+      {
+        "score": 2.5,
+        "links": 2,
+        "via": [
+          "MR",
+          "PSS"
+        ],
+        "hits": [
+          "zero-error"
+        ],
+        "year": 2012,
+        "title": "1 Kochen-Specker Sets and the Rank-1 Quantum Chromatic Number",
+        "authors": "Giannicola Scarpa et al.",
+        "venue": "",
+        "id": "W3102212064"
+      },
+      {
+        "score": 2.5,
+        "links": 2,
+        "via": [
+          "KPS",
+          "MNY"
+        ],
+        "hits": [
+          "synchronous"
+        ],
+        "year": 2017,
+        "title": "Algebras, Synchronous Games and Chromatic Numbers of Graphs",
+        "authors": "J. William Helton et al.",
+        "venue": "arXiv (Cornell University)",
+        "id": "10.48550/arxiv.1703.00960"
+      },
+      {
+        "score": 2.5,
+        "links": 2,
+        "via": [
+          "MR",
+          "PSS"
+        ],
+        "hits": [
+          "zero-error"
+        ],
+        "year": 2011,
+        "title": "Kochenâ€“Specker Sets and the Rank-1 Quantum Chromatic Number",
+        "authors": "Giannicola Scarpa et al.",
+        "venue": "IEEE Transactions on Information Theory",
+        "id": "10.1109/tit.2011.2178018"
+      },
+      {
+        "score": 2.5,
+        "links": 2,
+        "via": [
+          "KPS",
+          "Slofstra"
+        ],
+        "hits": [
+          "synchronous"
+        ],
+        "year": 2015,
+        "title": "Synchronous correlation matrices and Connesâ€™ embedding conjecture",
+        "authors": "Kenneth J. Dykema et al.",
+        "venue": "Journal of Mathematical Physics",
+        "id": "10.1063/1.4936751"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "MRV",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2013,
+        "title": "Variations on a Theme: Graph Homomorphisms",
+        "authors": "David E. Roberson",
+        "venue": "",
+        "id": "W782558809"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "PSS",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 1993,
+        "title": "Some results and problems on quantum Bell-type inequalities",
+        "authors": "Boris S. Tsirelson",
+        "venue": "",
+        "id": "W2995328993"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "MR",
+          "NPA"
+        ],
+        "hits": [],
+        "year": 2001,
+        "title": "Quantum computation and quantum information",
+        "authors": "Jim Law",
+        "venue": "ACM SIGSOFT Software Engineering Notes",
+        "id": "10.1145/505482.505499"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "MR",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2001,
+        "title": "Algebraic Graph Theory",
+        "authors": "Chris D. Godsil et al.",
+        "venue": "Graduate texts in mathematics",
+        "id": "10.1007/978-1-4613-0163-9"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "Harris",
+          "MNY"
+        ],
+        "hits": [],
+        "year": 1976,
+        "title": "Classification of Injective Factors Cases II 1 , II âˆž , III Î» , Î» ï¿½ 1",
+        "authors": "Alain Connes A",
+        "venue": "Annals of Mathematics",
+        "id": "10.2307/1971057"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "CLMW",
+          "NPA"
+        ],
+        "hits": [],
+        "year": 2005,
+        "title": "Nonlocal correlations as an information-theoretic resource",
+        "authors": "Jonathan Barrett et al.",
+        "venue": "Physical Review A",
+        "id": "10.1103/physreva.71.022101"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "MNY",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2008,
+        "title": "Tsirelson's Problem",
+        "authors": "Volkher B. Scholz et al.",
+        "venue": "arXiv (Cornell University)",
+        "id": "10.48550/arxiv.0812.4305"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "MR",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2003,
+        "title": "Pseudo-telepathy, entanglement, and graph colorings",
+        "authors": "Viktor Galliard et al.",
+        "venue": "IEEE International Symposium on Information Theory (ISIT)",
+        "id": "10.1109/isit.2002.1023373"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "CLMW",
+          "MR"
+        ],
+        "hits": [],
+        "year": 1999,
+        "title": "Cost of Exactly Simulating Quantum Entanglement with Classical Communication",
+        "authors": "Gilles Brassard A et al.",
+        "venue": "Physical Review Letters",
+        "id": "10.1103/physrevlett.83.1874"
+      }
+    ],
+    "forward": [
+      {
+        "score": 6.0,
+        "links": 6,
+        "via": [
+          "Harris",
+          "KPS",
+          "MR",
+          "NPA",
+          "PSS",
+          "Slofstra"
+        ],
+        "hits": [],
+        "year": 2026,
+        "title": "Games and Algebras",
+        "authors": "Samuel J. Harris et al.",
+        "venue": "Operator Theory",
+        "id": "10.1007/978-3-032-16356-1_83"
+      },
+      {
+        "score": 4.5,
+        "links": 4,
+        "via": [
+          "MR",
+          "NPA",
+          "PSS",
+          "Slofstra"
+        ],
+        "hits": [
+          "nonlocal game"
+        ],
+        "year": 2026,
+        "title": "Nonlocal Games Revisited: A Review of Representation Frameworks from Bell Locality to Quantum Pseudo-Telepathy",
+        "authors": "Mustafa Mert Ã–zyÄ±lmaz et al.",
+        "venue": "Bozok journal of science.",
+        "id": "10.70500/bjs.1947617"
+      },
+      {
+        "score": 4.0,
+        "links": 3,
+        "via": [
+          "KPS",
+          "NPA",
+          "PSS"
+        ],
+        "hits": [
+          "synchronous",
+          "commuting operator"
+        ],
+        "year": 2026,
+        "title": "An operator system approach to self-testing",
+        "authors": "Jason Crann et al.",
+        "venue": "Advances in Mathematics",
+        "id": "10.1016/j.aim.2026.110884"
+      },
+      {
+        "score": 3.5,
+        "links": 2,
+        "via": [
+          "KPS",
+          "PSS"
+        ],
+        "hits": [
+          "nonlocal game",
+          "synchronous",
+          "schmidt"
+        ],
+        "year": 2025,
+        "title": "Rounding near-optimal quantum strategies for nonlocal games to strategies using a maximally entangled state",
+        "authors": "Connor Paddock",
+        "venue": "Journal of Mathematical Physics",
+        "id": "10.1063/5.0209725"
+      },
+      {
+        "score": 3.0,
+        "links": 2,
+        "via": [
+          "MNY",
+          "NPA"
+        ],
+        "hits": [
+          "synchronous",
+          "commuting operator"
+        ],
+        "year": 2026,
+        "title": "MIPá¶œáµ’=coRE",
+        "authors": "Junqiao (Randy) Lin",
+        "venue": "ACM Symposium on Theory of Computing (STOC)",
+        "id": "10.1145/3798129.3800751"
+      },
+      {
+        "score": 2.5,
+        "links": 2,
+        "via": [
+          "CLMW",
+          "Slofstra"
+        ],
+        "hits": [
+          "zero-error"
+        ],
+        "year": 2026,
+        "title": "Nonlocality-assisted enhancement of error-free communication in noisy classical channels",
+        "authors": "Kunika Agarwal et al.",
+        "venue": "Physical Review A",
+        "id": "10.1103/dsdj-dz8l"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "KPS",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2026,
+        "title": "Unique games and games based on groups",
+        "authors": "Rupert H. Levene et al.",
+        "venue": "Journal of Mathematical Physics",
+        "id": "10.1063/5.0290374"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "NPA",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2026,
+        "title": "Trading symmetry for Hilbert-space dimension in Bell-inequality violation",
+        "authors": "Hsin-Yu Hsu et al.",
+        "venue": "Quantum Science and Technology",
+        "id": "10.1088/2058-9565/ae6bb1"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "MNY",
+          "MR"
+        ],
+        "hits": [],
+        "year": 2025,
+        "title": "New Approaches to Complexity via Quantum Graphs",
+        "authors": "Eric Culf et al.",
+        "venue": "Quantum Information and Computation",
+        "id": "10.2478/qic-2025-0026"
+      },
+      {
+        "score": 2.0,
+        "links": 2,
+        "via": [
+          "Harris",
+          "PSS"
+        ],
+        "hits": [],
+        "year": 2025,
+        "title": "Quantum chromatic number of products of quantum graphs",
+        "authors": "Rolando de Santiago et al.",
+        "venue": "Journal of Mathematical Physics",
+        "id": "10.1063/5.0248557"
+      }
+    ]
+  }
+}

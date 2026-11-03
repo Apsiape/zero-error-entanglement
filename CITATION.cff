@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: Please cite the paper; this distribution supplies its source and finite checks.
+type: software
+title: "One-shot zero-error communication with normal entanglement is Σ⁰₂-complete"
+version: 1.0.0
+date-released: '2026-11-03'
+license: [CC-BY-4.0, MIT, Apache-2.0]
+authors: [{"family-names": "Douglas", "given-names": "Seth", "orcid": "https://orcid.org/0009-0007-4708-3252"}, {"family-names": "Mghirbi", "given-names": "Nidhal", "orcid": "https://orcid.org/0009-0005-6534-1118"}]
+keywords: ["zero-error communication", "entanglement-assisted capacity", "nonlocal games", "arithmetical hierarchy", "quantum information", "operator algebras"]
+abstract: "Can a finite classical channel require an infinite entangled resource to send a fixed number of messages without error? We classify the one-use feasibility problem for rational channels. With an arbitrary normal spatial resource it is Σ⁰₂-complete. The same classification holds when the resource must have finite marginal entropy. A separate channel admits a normal zero-error code, while every normal code achieving its specified message count has infinite marginal entropy on both sides.\n\nThe proof extends Mančinska's finite-dimensional game-to-channel correspondence to trace-class operators. For the game's channel, a normal code attaining the clique bound (one message per local question) corresponds to perfect play with summable Schmidt amplitudes. Four successive constraints, each doubling a ratio of Schmidt weights, are critical and exclude such a code; five suffice for both reductions. As a corollary of Mančinska's finite-dimensional correspondence and MIP*=RE, we obtain Σ⁰₁-completeness for finite-dimensional resources. We also prove Π⁰₁-completeness for commuting operators. Our capacity statements are upper computability bounds; the hardness results concern one use."
+preferred-citation:
+  type: generic
+  title: "One-shot zero-error communication with normal entanglement is Σ⁰₂-complete"
+  authors: [{"family-names": "Douglas", "given-names": "Seth", "orcid": "https://orcid.org/0009-0007-4708-3252"}, {"family-names": "Mghirbi", "given-names": "Nidhal", "orcid": "https://orcid.org/0009-0005-6534-1118"}]
+  year: 2026
+  version: 1.0.0
+  notes: 'Preprint. It has not been peer reviewed. Text: CC BY 4.0. Scripts: MIT or Apache 2.0; see RIGHTS.md.'

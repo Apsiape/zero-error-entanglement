@@ -1,0 +1,41 @@
+\section{Introduction}
+A sender uses a finite noisy classical channel once. Beforehand, sender and receiver share an entangled state. The sender encodes one of $m$ messages into the channel input, and the receiver must identify that message with certainty. We ask whether such a code exists, allowing an arbitrary normal state on a tensor product of Hilbert spaces. The channel and the message count remain finite; only the shared resource is unrestricted.
+
+Zero-error communication depends on exact zeros, rather than on how closely a protocol approaches perfect transmission. This makes attainment decisive. We show that allowing a normal infinite-dimensional resource raises one-use feasibility from the first to the second existential level of the arithmetical hierarchy. We also construct a channel for which infinite marginal entropy is necessary to attain a specified message count.
+
+For a finite rational stochastic matrix $N$ and an integer $m\geq1$, write $\ZE_t(N,m)$ for this feasibility problem. The model $q$ uses finite-dimensional tensor products. The model $\qs$ uses a normal density operator on a spatial tensor product, with bounded finite-outcome POVMs. The model $\qc$ uses commuting local operator algebras and a state. Here normal means represented by a positive trace-class density operator of trace one; on a spatial tensor product this includes pure vectors and countable mixtures. The entropy restriction $\finS$ means that both resource marginals have finite von Neumann entropy. We use logarithms to base two, countably infinite Schmidt decompositions, and computable many-one reductions.
+
+For readers unfamiliar with the hierarchy, a set is $\Sigma^0_2$ if membership can be written $\exists j\,\forall r\,R(e,j,r)$ with $R$ decidable. Completeness means that the problem is itself of this form and every set of this form reduces computably to it. The classes $\Sigma^0_1$ and $\Pi^0_1$ use a single existential or universal number quantifier, respectively.
+
+\begin{theorem}\label{thm:main}
+For finite rational classical channels, $\ZE_{\qs}$ and $\ZE_{\finS}$ are $\Sigma^0_2$-complete.
+\end{theorem}
+
+\begin{theorem}\label{thm:entropyonly}
+There are a finite rational classical channel $N$ and an integer $m$ for which $\ZE_{\qs}(N,m)$ holds, and every normal spatial $m$-message zero-error resource has infinite marginal entropy on both sides.
+\end{theorem}
+
+The main bridge to these results is a trace-class extension of Man\v{c}inska's correspondence. For any finite two-player game $G$, her graph $\Gamma(G)$ has one vertex per tagged local question--answer pair. Let $k$ be the total number of local questions. We prove that the associated channel admits $k$ messages with a normal resource exactly when $G$ has a perfect pure spatial strategy with summable Schmidt amplitudes. This is stronger than mere normal attainment. The finite-dimensional statement, including the converse and the state transformation, is already \cite[Theorem~6]{Mancinska}.
+
+We apply this extension to the compiler of \cite{Sigma2}. Its original four-bridge games lie exactly at the summability threshold: none of their channels admits a saturating normal code, even on YES inputs. Adding a fifth bridge changes the modular ratio and restores summability. The same five-bridge YES codes have finite marginal entropy. The threshold is visible in the four-letter tree density $h_{F,\lambda}=(1-4\lambda)\sum_w\lambda^{|w|}|w\rangle\langle w|$ of Section~\ref{sec:tree}:
+\[
+ \Tr\sqrt{h_{F,\lambda}}
+ =\sqrt{1-4\lambda}\sum_{\ell=0}^{\infty}(4\sqrt\lambda)^\ell,
+ \qquad \lambda=2^{-n}.
+\]
+There are four branches per level, so summability requires $n\geq5$.
+A four-bridge version of the Catalan assembly of \cite{Entropy} instead makes the code's Catalan marginal factor exactly $\hcat$, with infinite entropy. The resulting game $\Gcat$ has finite-entropy perfect strategies: its Catalan factor $\kcat$ has entropy about $0.41$ bits, and the remaining canonical factors are finite dimensional. Its channel forces infinite entropy at the specified message count. Thus the communication task itself creates the entropy demand through the normalized square-root map.
+
+\paragraph{Finite and commuting resources.}
+We also obtain that $\ZE_q$ is $\Sigma^0_1$-complete and $\ZE_{\qc}$ is $\Pi^0_1$-complete. The finite-dimensional lower bound is a direct corollary of Man\v{c}inska's Corollary~7 and the perfect-completeness form of $\mathsf{MIP}^*=\mathsf{RE}$ \cite{Mancinska,MIPRE}. We claim no new finite-dimensional game-to-channel reduction. For commuting resources we give the saturation argument for arbitrary codes, rather than assuming the code comes from a synchronous strategy.
+
+\paragraph{Prior work and attribution.}
+Cubitt, Leung, Matthews and Winter established the operator characterization of entanglement-assisted zero-error codes and the pseudo-telepathy construction \cite{CLMW}. Man\v{c}inska proved finite-dimensional clique saturation in Lemma~5, the converse and square-root state map in Theorem~6, and the entanglement-assisted independence-number characterization in Corollary~7 of \cite{Mancinska}. Her tracial game value admits infinite-dimensional tracial strategies, but her zero-error results assume a finite-dimensional shared state. Her question count $q$ is our $k$. Corollary~8 gives the fifty-input flagged-magic-square channel with ten entangled messages and at most nine messages from finite-dimensional maximally entangled resources. Our finite numerical checks reproduce that example as a regression check.
+
+Man\v{c}inska, Roberson and Varvitsiotis studied perfect strategies and independent-set game reductions \cite{MRV}; Man\v{c}inska and Roberson developed quantum graph homomorphisms \cite{MR}. Harris proved universality results for synchronous graph homomorphism games \cite{Harris}. Those game parameters should be distinguished from codes with arbitrary resources. Kim, Paulsen and Schafhauser's equality of finite-dimensional and spatial synchronous correlation sets \cite{KPS} does not apply to our nonsynchronous compiler.
+
+Bhattacharyya, Mehta and Zhao proved undecidability for a restricted entanglement-assisted one-shot parameter of classical-to-quantum channels \cite{BMZ}. Their formal one-shot parameter uses maximal entanglement and projective measurements \cite[Definition~2.3]{BMZ}. The finite row here removes these restrictions for classical channels and for a one-shot threshold. It does not resolve the unrestricted asymptotic capacity question. Slofstra proved $\Pi^0_1$-hardness for linear system games \cite{Slofstra}; with the NPA bound this is $\Pi^0_1$-completeness, which Mousavi, Nezhadi and Yuen reprove for synchronous games \cite[Theorem~6.4]{MNY}. This is the source problem for our commuting row.
+
+To our knowledge, the new statements developed here are the normal trace-class correspondence, the second-level normal complexity classification, the summability threshold of the compiled games, the infinite-entropy-only channel, and the commuting-code saturation reduction. The finite row is recorded as an explicitly attributed corollary. All claims about capacities in Section~\ref{sec:capacity} are upper bounds on computability.
+
+This priority statement is provisional. It rests on the cited hierarchy and correlation papers, their nearby results, and a targeted literature search. It is not an exhaustive bibliographic certificate.

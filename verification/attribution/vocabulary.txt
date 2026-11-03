@@ -1,0 +1,9 @@
+zero-error
+entanglement-assisted
+quantum independence
+nonlocal game
+synchronous
+trace-class
+Schmidt
+commuting operator
+normal spatial

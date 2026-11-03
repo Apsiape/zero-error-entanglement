@@ -1,0 +1,20 @@
+\section{Reproducibility and claim attribution}\label{sec:repro}
+The accompanying portable verification directory contains finite matrix checks, explicit pass/fail assertions, and exact general-bridge checks. Run \texttt{python run\_all.py} after installing the packages in \texttt{requirements.txt}. Each invocation writes to a fresh output directory. Floating-point matrix checks use explicit tolerances; the bridge and Catalan constants are checked symbolically. The runner reports a failure if any assertion fails. The recorded results, dependency versions and source hashes accompany the bundle.
+
+The magic-square graph has classical independence number five and a six-message entangled code. The flagged-magic-square graph has fifty vertices, classical independence number nine and a ten-message entangled code. The reverse map is also tested after a noncommutative row-and-column scrambling. These examples verify the implementation of the finite correspondence already proved in \cite{Mancinska}; they are not novelty claims. The naive $D^2$ forward marginal is tested as a negative control.
+
+The exact script checks $4n+1$, $6n+1$, $\Omega_n$, normalized scaffold weights, source/far mass ratios, convergence and criticality of the amplitude series, the five/eight constants, the five-bridge code entropy, the squared Catalan entropy, and all identities in \eqref{eq:Catnumbers}. The infinite entropy conclusion uses Catalan asymptotics in the proof, not a finite partial entropy sum.
+
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.30\linewidth}>{\raggedright\arraybackslash}p{.24\linewidth}>{\raggedright\arraybackslash}p{.37\linewidth}@{}}\toprule
+claim&attribution&proof/evidence\\\midrule
+finite game--channel correspondence&known: Man\v{c}inska&Lemma 5, Theorem 6 and Corollaries 7--8 of \cite{Mancinska}\\
+normal trace-class correspondence&new extension&Section~\ref{sec:normal}; bounded Douglas factorization\\
+$n$-bridge spectrum control&new extension of authors' compiler&Section~\ref{sec:compiler}; finite-amplification cancellation\\
+normal and finite-entropy complexity&new&Section~\ref{sec:complexity}; source reduction \cite{Sigma2}\\
+finite-dimensional complexity&attributed corollary&Man\v{c}inska plus \cite{MIPRE}\\
+commuting complexity&new arbitrary-code reduction&Section~\ref{sec:commuting}; source hardness \cite{Slofstra,MNY}\\
+infinite-entropy-only channel&new&Section~\ref{sec:catalan}; source Catalan tools \cite{Entropy}\\
+capacity computability&upper bounds only&Section~\ref{sec:capacity}; no capacity hardness claim\\\bottomrule
+\end{tabular}
+\end{center}

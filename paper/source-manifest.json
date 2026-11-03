@@ -1,0 +1,226 @@
+{
+  "format_version": 2,
+  "version": "1.0.0",
+  "date": "2026-11-03",
+  "title": "One-shot zero-error communication with normal entanglement is Σ⁰₂-complete",
+  "authors": [
+    "Seth Douglas",
+    "Nidhal Mghirbi"
+  ],
+  "path_base": "archive root",
+  "source_archive": "paper/source.zip",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "15974ed3f6c6c1e51c448597f16526ce0351063fbae349b7c50aceabceff2057"
+    },
+    {
+      "path": ".zenodo.json",
+      "sha256": "ce6b45c34998b0b966cd588b6cc4752af093de48aa5e6ea1eb9e167a025f0889"
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "e4093a40d6f0e1724fb3889a9e01c4468e025e7e4cadaebe407e00a118828ea2"
+    },
+    {
+      "path": "LICENSE-APACHE-2.0.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "LICENSE-CC-BY-4.0.txt",
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+    },
+    {
+      "path": "LICENSE-MIT.txt",
+      "sha256": "5acccb1b89219500cc414b42d48b4f27edc0116242d4d33d768708a503bd9c95"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "27afbc5c539d1da7455287e5ba4e972eb29e1334116cbab4f1a31d56255aaa3f"
+    },
+    {
+      "path": "paper/abstract.txt",
+      "sha256": "266e5881e20da389ce0e40b2961b7f337ea95b2af3c9e160914645a89b8d5251"
+    },
+    {
+      "path": "paper/build.py",
+      "sha256": "0fa7da7f930e29625c1cf97c7b4f52d50e0f5ee08ca1c09b09a5d7f0b9492a4f"
+    },
+    {
+      "path": "paper/main.pdf",
+      "sha256": "25ed40a9f9a6e1032bd034128b4aa65a3f16dd22dc1817df67eefe897ea115ac"
+    },
+    {
+      "path": "paper/main.tex",
+      "sha256": "860c347405018993e220d3881bfa6923199ae9e7824d96f47d5efc74711ca563"
+    },
+    {
+      "path": "paper/references.bib",
+      "sha256": "2bb485f523e82a157ada84e2dc311ee3574a5871360e20ac62356e67c0e38dc1"
+    },
+    {
+      "path": "paper/sections/capacity.tex",
+      "sha256": "1579f97003dddbc52e91330632778ddf3def2b5ed546ce263c2516fcf7b6eeff"
+    },
+    {
+      "path": "paper/sections/catalan.tex",
+      "sha256": "0a2ce5e8ac4d0d6cc821633876b62f47019481c4812cbd1393628e27d1558214"
+    },
+    {
+      "path": "paper/sections/commuting.tex",
+      "sha256": "c2e81081a2632d59d241be504a232e762e482a39446ae5b0f805b8422d70b750"
+    },
+    {
+      "path": "paper/sections/compiler.tex",
+      "sha256": "b2574b141833da419dbb7fde11faf60335f58d512ccddc0704ec28993c1d05e3"
+    },
+    {
+      "path": "paper/sections/complexity.tex",
+      "sha256": "4fd2f11ce6cb47235afa9ff0c90c30a7b379eed28633135454412e707d6ae5c2"
+    },
+    {
+      "path": "paper/sections/intro.tex",
+      "sha256": "9492768ff087b74ddca5ec32b334b1fe3fa0f0ca3848518facad84be3c14eefb"
+    },
+    {
+      "path": "paper/sections/methods.tex",
+      "sha256": "adb61feb4b0291359a0c3121eb5263adac8c7c3021a4441ac440c3cc832f07e5"
+    },
+    {
+      "path": "paper/sections/normal.tex",
+      "sha256": "b4aed47a0b93b65bc59cb3766bba81f9de135a1c1a49dfa3ecb1316a78961ee1"
+    },
+    {
+      "path": "paper/sections/notation.tex",
+      "sha256": "2b64f812fb017856cc90eea357873cb23b0d1237a9fa0e05d211eaa999ebb01a"
+    },
+    {
+      "path": "paper/sections/reproducibility.tex",
+      "sha256": "da26b25f1daf52bacf165d99c5061abe3be54e3b9a13ca9227496bd679def2d5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "eee8800cf774db1889dd4127cdcd9a8301b610dc0add8ea2a151ba837b849f3f"
+    },
+    {
+      "path": "RIGHTS.md",
+      "sha256": "917037914fc8e2cf1caab4baeb12718b7ed7ea27fd2a0a5adcd4c777041195cb"
+    },
+    {
+      "path": "verification/attribution/snowball-input.bib",
+      "sha256": "04de170978160457979e776fd9c795e854567133c7bb08fb3daee36d5927bd20"
+    },
+    {
+      "path": "verification/attribution/snowball-results/candidates.json",
+      "sha256": "4de446fff5361cac75f407b553b24e21760ece4dd7fb980ddc62b2e3c7b07299"
+    },
+    {
+      "path": "verification/attribution/snowball-results/candidates.md",
+      "sha256": "b99bdf63581f5d5cb61a95c3712f22bc86f524248ee554a0fabc8bb90bdcbcd6"
+    },
+    {
+      "path": "verification/attribution/vocabulary.txt",
+      "sha256": "09bea73faf9e3433bedddca32057b979bf1b434b36d0f1483acc529b84df78f7"
+    },
+    {
+      "path": "verification/check_hashes.py",
+      "sha256": "e21157bab5ffc726f06d03b2511642e892ba49c6c6612031e53b85719757de8a"
+    },
+    {
+      "path": "verification/exact_constants.py",
+      "sha256": "2eea885cb23899d125d313ce9044016f263e96d2fa4fd232b194523cc3a939dc"
+    },
+    {
+      "path": "verification/fock_catalan_numbers.py",
+      "sha256": "09873b8c7d3ec6a30125b261b37b300615e679107d5201650e65db6362e41fd8"
+    },
+    {
+      "path": "verification/l2_pitfall.py",
+      "sha256": "2e307a77d67cd1ccd92531caf906c1a324db728a9b827c2af2ebefc6283ed86d"
+    },
+    {
+      "path": "verification/requirements.txt",
+      "sha256": "3dfd5059350f337919079d994f5338e7977eaff025d1681edb28179f1f96fdfa"
+    },
+    {
+      "path": "verification/results/exact_constants.py.out",
+      "sha256": "0f61e694162a0b908d1c57221470353d014cc0c2a20b30a3af88e8787a5ae1b0"
+    },
+    {
+      "path": "verification/results/fock_catalan_numbers.py.out",
+      "sha256": "768b26d34db069413fcf3e3a83c60a05f569bfcb58e2be34e407da0ca4b8b639"
+    },
+    {
+      "path": "verification/results/l2_pitfall.py.out",
+      "sha256": "10c566c91c9d9abfa2d6ae858c8357ab1464e6003dc030cf88efd6882cbca2c7"
+    },
+    {
+      "path": "verification/results/summary.json",
+      "sha256": "bcbcbb99229b918bf5b57368c9650f7e7ecbeb3a2d888eaa645535602f1119af"
+    },
+    {
+      "path": "verification/results/thm1_fms.py.out",
+      "sha256": "750876ae31e3933851b2b0c7b21ae93476488f2e581090c44118a0db839eb5d0"
+    },
+    {
+      "path": "verification/run_all.py",
+      "sha256": "a4ff3c6e9372e6deed8ea500e77388a1e0edde0b9de9f2d89d9189ba34310f8f"
+    },
+    {
+      "path": "verification/thm1_fms.py",
+      "sha256": "56e27aeeb58ad43554b89b3fc9790883e150a2bdf8600562536d0ac774a65ef8"
+    },
+    {
+      "path": "verification/verify_portable.py",
+      "sha256": "d7e42d1700372fb2a5de12401d4ced8458d2058df436fcdddb262141d33a6a4a"
+    }
+  ],
+  "provenance": [
+    "10.1016/j.jctb.2015.12.009",
+    "10.1016/j.jfa.2016.01.010",
+    "10.1063/1.4996867",
+    "10.1088/1367-2630/10/7/073013",
+    "10.1090/S0002-9939-1966-0203464-1",
+    "10.1090/jams/929",
+    "10.1103/PhysRevA.82.010303",
+    "10.1103/PhysRevLett.104.230503",
+    "10.1145/3519935.3519949",
+    "10.4086/CJTCS.2016.005",
+    "10.5281/zenodo.23902656",
+    "10.5281/zenodo.23910987",
+    "arXiv:0803.4290",
+    "arXiv:0911.5300",
+    "arXiv:1002.2488v2",
+    "arXiv:1212.1724",
+    "arXiv:1506.07429",
+    "arXiv:1606.03140",
+    "arXiv:1707.01016",
+    "arXiv:2001.04383v4",
+    "arXiv:2110.04651v2",
+    "arXiv:2305.18116v2",
+    "arXiv:2601.22471v3",
+    "arXiv:2610.06512v1"
+  ],
+  "build": {
+    "pdf_pages": 23,
+    "engine": "pdfTeX 3.141592653-2.6-1.40.28 (MiKTeX 25.12)",
+    "bibliography": "BibTeX",
+    "final_warning_count": 0,
+    "undefined_reference_count": 0,
+    "overfull_count": 0,
+    "underfull_count": 0,
+    "shipped_pdf_preserved_on_rebuild": true
+  },
+  "verification_run": "verification/results",
+  "archive_exclusions": [
+    "build logs and transient TeX files",
+    "downloaded third-party papers",
+    "rendered page images",
+    "private preparation records"
+  ],
+  "self_hash_policy": "Manifest excludes itself, the hash list and the archive; hash list includes the manifest but excludes itself and the containing archive. Archive SHA-256 is recorded in the external release report to avoid recursive self-hashing."
+}

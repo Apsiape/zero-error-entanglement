@@ -1,0 +1,16 @@
+\section{Capacity bounds and open questions}\label{sec:capacity}
+Let $a_t(r)$ be the largest message count achievable with model $t$ over $N^{\otimes r}$. Product codes give $a_t(r+s)\geq a_t(r)a_t(s)$, including for normal and commuting resources. The singleton-clique bound gives $1\leq a_t(r)\leq|X|^r$. Fekete's lemma therefore gives
+\[
+ C_{0,t}(N)=\lim_{r\to\infty}\frac{\log_2a_t(r)}r
+          =\sup_{r\geq1}\frac{\log_2a_t(r)}r.
+\]
+For a rational $b$, the strict lower-cut condition is
+\[
+ b<C_{0,t}(N)\ \Longleftrightarrow\
+ \exists r,m\ [\ZE_t(N^{\otimes r},m)\ \text{and}\ b<\log_2(m)/r].
+\]
+The logarithmic comparison is decidable for rational $b$: after clearing denominators it compares integer powers (with trivial cases for $b<0$).
+
+The $q$ predicate is computably enumerable, so $C_{0,q}$ is uniformly left-c.e. For $\qs$ the one-shot predicate is $\Sigma^0_2$, hence c.e. relative to the halting oracle $0'$. For $\qc$ it is $\Pi^0_1$, hence decidable relative to $0'$. Taking the displayed existential union proves that both $C_{0,\qs}$ and $C_{0,\qc}$ are uniformly left-c.e. relative to $0'$. These are upper bounds only.
+
+One-shot hardness does not imply capacity hardness: other message counts or tensor powers can hide the one-use threshold. Our reductions do not control these possibilities. The computability and precise arithmetical complexity of normal-entanglement zero-error capacity remain open. So does a strict separation of $C_{0,q}$ from $C_{0,\qs}$ for a finite classical channel. The channels constructed here separate one-shot attainment or entropy requirements; no asymptotic separation follows from them.

@@ -1,0 +1,93 @@
+\section{The normal and finite-dimensional complexity rows}\label{sec:complexity}
+\subsection{Upper membership}
+Convert a channel instance $(N,m)$ to a finite game $\mathcal G_{\rm code}(N,m)$. Alice receives $i\in[m]$ and answers a channel input $x$; Bob receives a channel output $y$ and answers $j\in[m]$. All question pairs have positive rational probability. A tuple loses exactly when $N(y\mid x)>0$ and $j\ne i$. With the same resource and measurements,
+\begin{equation}\label{eq:codegame}
+ \ZE_t(N,m)\ \Longleftrightarrow\
+ \mathcal G_{\rm code}(N,m)\text{ has a perfect }t\text{-strategy}.
+\end{equation}
+Indeed the error probability of the code is the finite sum of these nonnegative expectations weighted by $N(y\mid x)$. It vanishes exactly when every forbidden expectation vanishes. The equivalence preserves marginal entropy as well.
+
+For completeness we restate the effective compact-stratum argument of \cite[Section~3]{Sigma2}. A pure normal vector has a largest positive Schmidt amplitude $s_1$. Divide its Schmidt operator by $s_1$, and choose an integer $K$ with
+\[
+ \delta_1=1,\quad 1\geq \delta_2\geq\cdots\geq0,\quad
+ \sum_i \delta_i^2\leq K.
+\]
+Then $\delta_{r+1}\leq\sqrt{K/(r+1)}$. These diagonal operators form an operator-norm compact family. Finite families of effects are weak-operator compact. If $E_j,F_j$ converge weakly and $\Delta_j$ converges in norm to a compact $\Delta$, then $E_j\Delta_jF_j$ converges weakly to $E\Delta F$: $\Delta F_jv$ converges in norm by compactness, and one pairs it with the weakly convergent $E_j^*u$.
+
+Define $R(G,K,r)$ to require $r$-dimensional POVMs and a sorted diagonal $\Delta_r$ with first entry one, squared sum at most $K$, and
+\[
+ |(E_{a|u}\Delta_rF_{b|v}^{\mathsf T})_{ij}|^2\leq K/(r+1)
+\]
+for every losing tuple and $i,j\leq r$. This is a rational semialgebraic feasibility problem and is decidable by real quantifier elimination. Compression of an exact strategy supplies all stages: the omitted diagonal tail has norm at most $\sqrt{K/(r+1)}$. Conversely extend stage effects by a deterministic POVM on the complement, take a compact subsequential limit, and use the compact-sandwich observation. Every losing sandwich is zero. The limit has first diagonal entry one and squared sum between one and $K$, so its normalized vectorization is a nonzero normal perfect strategy. Consequently
+\[
+ G\in\operatorname{PERF}_{\qs}\ \Longleftrightarrow\
+ \exists K\ \forall r\ R(G,K,r).
+\]
+Mixed strategies reduce to pure perfect components, as in Lemma~\ref{lem:assemblage}. Equation~\eqref{eq:codegame} proves $\ZE_{\qs}\in\Sigma^0_2$.
+
+For finite entropy one uses entropy budgets rather than the largest Schmidt amplitude \cite[Section~3.4]{Sigma2}. Here are the effective details. Sorted probabilities satisfy $p_i\leq1/i$, so $H(p)\leq B$ implies
+\[
+ \sum_{i>r}p_i\leq B/\log_2(r+1).
+\]
+The normalized first-$r$ truncation majorizes $p$ and has entropy at most $B$. Its vector trace distance is the square root of the omitted mass. Thus a perfect strategy supplies finite strategies whose loss is at most a computable rational $\eta_{B,r}>\sqrt{B/\log_2(r+1)}$, tending to zero, and whose entropy is at most $B$.
+
+To decide finite relaxations approximate $H$ uniformly on the finite probability simplex by computable rational polynomials $H_{r,a}$ within $1/a$. This is effective since $-t\log_2t$, extended by zero at zero, is computably continuous; rational Bernstein approximations suffice. Require sorted $p$, $s_i\geq0$, $s_i^2=p_i$, finite POVMs, loss at most $\eta_{B,r}$, and
+\[
+ H_{r,a}(p)\leq B+1/r+1/a.
+\]
+Each relaxation is decidable. If all $a$ stages at fixed $r$ are feasible, finite-dimensional compactness gives a witness of entropy at most $B+1/r$. Uniform entropy bounds give tightness of the sorted distributions in $\ell^1$, hence compactness of their square roots in $\ell^2$. Passing over $r$ to a limit, with weak limits of the effects, gives zero loss and entropy at most $B$ by lower semicontinuity. Conversely a perfect strategy with entropy at most $B$ satisfies every relaxation. Flattening the two universal indices gives a $\Pi^0_1$ budget stratum, and taking the union over integer $B$ gives $\Sigma^0_2$.
+
+If a mixed perfect resource has finite entropy on one marginal, entropy concavity gives a positive-weight pure perfect component of finite entropy. For a pure bipartite component the two marginal entropies agree. Hence using one or both finite marginal entropies leads to the same feasibility set, and \eqref{eq:codegame} proves $\ZE_{\finS}\in\Sigma^0_2$.
+
+\subsection{Five bridges for normal hardness}
+Let $S=\{e:\exists j\ \forall t\ R(e,j,t)\}$ for any decidable predicate $R$. Use the presentation of \cite[Sections~5--7]{Sigma2}, with its computation program hardwiring $e$, and change only its bridge count to five. Denote the resulting game by $G_e^{(5)}$. For reference its unchanged clock and computation mechanism is as follows.
+
+The four-letter tree carries, at depth $r$, a $2^r$-by-$2^r$ coordinate square. Centralizer unitaries and projections impose cyclic coordinate increments and boundary indicators. A root Weyl pair $J_{\rm clk}K_{\rm clk}=ZK_{\rm clk}J_{\rm clk}$ commuting with the root density has a nonzero finite-order phase sector; its determinant on a positive density eigenspace forces this. The clock recurrence gives $Z_{\rm clk}=Z^y$ at coordinate $(x,y)$, while a positive injective counter has value $2^{-y}$. The two reader equations
+\[
+ (Z_{\rm clk}-I)P_{\rm ret}=0,\qquad
+ T_{\rm inv}(Z_{\rm clk}-I)=\tfrac12C_{\rm ctr}(I-P_{\rm ret})
+\]
+force $P_{\rm ret}$ to be exactly the kernel projection of $Z_{\rm clk}-I$. On a phase of order $\qclk$, the first positive return is precisely time $\qclk$.
+
+The deterministic tableau freezes a waiting front at that time and reads its coordinate as unary input. It halts if $\qclk$ is one or composite. If $\qclk=p_{j+1}$ is prime it checks $R(e,j,0),R(e,j,1),\ldots$ and halts at the first failure. Later pulses have no effect. A halt is forbidden by an operator equation. Every depth has positive normal weight, so a finite halting event eventually appears in a sufficiently large square and contradicts perfection. These are exact identities, not assertions about high-probability truncations.
+
+If the game is perfect, Lemma~\ref{lem:compiler} extracts this mechanism and therefore a witness $j$. Conversely a witness $j$ uses the canonical tree, a $\qclk$-dimensional Weyl pair for $\qclk=p_{j+1}$, the good primitive phase and bounded reader from \cite[Section~6]{Sigma2}, and its nonhalting classical tableau. The reader norm estimate depends on the phase and the counter, not on $\lambda$. Its density is $h_{F,1/32}\otimes I_{\qclk}/\qclk$. This is the simultaneous canonical realization, so Lemma~\ref{lem:compiler} supplies a perfect game strategy. Formula~\eqref{eq:fiveconstant} makes its Schmidt amplitudes summable.
+
+Now put
+\[
+ N_e=N_{\Gamma(G_e^{(5)})},\qquad
+ k_e=|U_e|+|V_e|.
+\]
+These data are finite and rational and are computed from $e$ without knowing its witness. Theorem~\ref{thm:correspondence} and the preceding two implications give
+\[
+ \ZE_{\qs}(N_e,k_e)\ \Longleftrightarrow\ e\in S.
+\]
+This proves $\Sigma^0_2$-hardness and the first part of Theorem~\ref{thm:main}. No channel in this reduction has a finite-dimensional saturating code: otherwise the finite converse would extract four orthogonal isometries on a nonzero finite-dimensional root space, an impossibility. We make no claim here that a value-one promise is inherited from the source construction.
+
+\subsection{Finite entropy already at five bridges}\label{sec:finiteentropy}
+Use exactly the same five-bridge reduction. The forward code marginal is the normalized square root of the canonical game marginal. Its tree factor is
+\[
+ \widehat h_5=\frac{\sqrt{h_{F,1/32}}}{\Tr\sqrt{h_{F,1/32}}}
+ =(1-2^{-1/2})\sum_w2^{-5|w|/2}|w\rangle\langle w|.
+\]
+At depth $\ell$ there are $4^\ell$ words, so the depth distribution is geometric with ratio $r_5=2^{-1/2}$. Its mean is $r_5/(1-r_5)=1+\sqrt2$. Each eigenvalue at depth $\ell$ has negative base-two logarithm $-\log_2(1-r_5)+(5/2)\ell$. Taking its expectation proves
+\begin{equation}\label{eq:fiveentropy}
+ S(\widehat h_5)=-\log_2(1-2^{-1/2})+\frac52(1+\sqrt2)
+ \approx 7.807\ \text{bits}.
+\end{equation}
+The full canonical code marginal is
+\[
+ \operatorname{diag}(\nu_5)\otimes\widehat h_5
+ \otimes I_{\qclk}/\qclk\otimes I_3/3\otimes I_{\drow}/\drow,
+ \qquad \nu_{5,i}=\frac{\sqrt{\mu_{5,i}}}{\sum_j\sqrt{\mu_{5,j}}}.
+\]
+Thus its entropy is $H(\nu_5)+S(\widehat h_5)+\log_2(3\qclk\drow)$, which is finite. The pure code has the same entropy on both sides. A NO input has no normal code at all, hence no finite-entropy code. The same map therefore proves the second half of Theorem~\ref{thm:main}.
+
+\begin{remark}[Eight bridges]
+With $n=8$, the normalized square root of $h_{F,1/256}$ is exactly $h_{F,1/16}$, with entropy $\log_2(4/3)+4/3$. Its amplitude sum is \eqref{eq:eightconstant}. This is another finite-entropy construction; five bridges already suffice for hardness.
+\end{remark}
+
+\subsection{The finite-dimensional row, as an attributed corollary}
+For each fixed dimension, the channel code game in \eqref{eq:codegame} has a rational semialgebraic perfect-strategy predicate: split matrix entries into real and imaginary parts, impose positivity, POVM sums, normalization and zero losing probabilities. Quantifier elimination decides it. Enumerating dimensions gives $\ZE_q\in\Sigma^0_1$.
+
+For hardness, the perfect-completeness reduction of $\mathsf{MIP}^*=\mathsf{RE}$ gives, from a halting instance, a finite game with a perfect finite-dimensional strategy, and from a nonhalting instance a game of entangled value at most $1/2$ \cite[Theorem~12.6]{MIPRE}. Man\v{c}inska's Corollary~7 maps perfect finite-dimensional game feasibility to the saturating one-shot channel threshold \cite{Mancinska}. Thus $\ZE_q$ is $\Sigma^0_1$-complete. This conclusion uses her finite theorem, not the new normal converse. We have not found this corollary stated. Since classical channels are quantum channels, it shows the one-shot threshold for $C^{(1)}_{0,E}$ is undecidable, and $\Sigma^0_1$-complete for classical channels \cite[Section~1.4]{BMZ}. Here $E$ denotes unrestricted finite-dimensional entanglement; this is a one-shot statement.
